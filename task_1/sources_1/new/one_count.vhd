@@ -4,7 +4,6 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity one_count is port ( 
     a : in  STD_LOGIC_VECTOR (122 downto 0);
---    count : out  STD_LOGIC_VECTOR (4 downto 0)
     result: out unsigned(7 downto 0)
 );
 end one_count;
