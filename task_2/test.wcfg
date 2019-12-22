@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="221099fs"></ZoomStartTime>
+      <ZoomEndTime time="1155781fs"></ZoomEndTime>
+      <Cursor1Time time="1000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="132"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/test/bits_n" type="other">
+      <obj_property name="ElementShortName">bits_n</obj_property>
+      <obj_property name="ObjectShortName">bits_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/is_a" type="logic">
+      <obj_property name="ElementShortName">is_a</obj_property>
+      <obj_property name="ObjectShortName">is_a</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/is_b" type="logic">
+      <obj_property name="ElementShortName">is_b</obj_property>
+      <obj_property name="ObjectShortName">is_b</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/x_in" type="array">
+      <obj_property name="ElementShortName">x_in[2:0]</obj_property>
+      <obj_property name="ObjectShortName">x_in[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/y_in" type="array">
+      <obj_property name="ElementShortName">y_in[2:0]</obj_property>
+      <obj_property name="ObjectShortName">y_in[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/z_in" type="array">
+      <obj_property name="ElementShortName">z_in[2:0]</obj_property>
+      <obj_property name="ObjectShortName">z_in[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/DUT/a_x" type="array">
+      <obj_property name="ElementShortName">a_x[2:0]</obj_property>
+      <obj_property name="ObjectShortName">a_x[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/DUT/a_y" type="array">
+      <obj_property name="ElementShortName">a_y[2:0]</obj_property>
+      <obj_property name="ObjectShortName">a_y[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/DUT/a_z" type="array">
+      <obj_property name="ElementShortName">a_z[2:0]</obj_property>
+      <obj_property name="ObjectShortName">a_z[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/DUT/x_out" type="array">
+      <obj_property name="ElementShortName">x_out[5:0]</obj_property>
+      <obj_property name="ObjectShortName">x_out[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/DUT/y_out" type="array">
+      <obj_property name="ElementShortName">y_out[5:0]</obj_property>
+      <obj_property name="ObjectShortName">y_out[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test/DUT/z_out" type="array">
+      <obj_property name="ElementShortName">z_out[5:0]</obj_property>
+      <obj_property name="ObjectShortName">z_out[5:0]</obj_property>
+   </wvobject>
+</wave_config>
+
