@@ -18,7 +18,7 @@ signal I_tdata  : unsigned(N - 1 downto 0);
 
 signal O_tvalid : std_logic;
 signal O_tready : std_logic;
-signal O_tdata  : tstatus;
+signal O_tdata  : toutput;
 
 begin
   			

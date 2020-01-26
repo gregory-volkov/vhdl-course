@@ -17,6 +17,10 @@ package p is
         index: integer;
         stat: tstatus;
     end record;
+    type toutput is record
+        stat: tstatus;
+        data: unsigned(N - 1 downto 0);
+    end record;
     type tpipeline_data is array (integer range <>) of tnode_s;
 end p;
 
@@ -39,7 +43,7 @@ entity bin_tree is
 	I_tready : out std_logic;
     
     O_tvalid : out std_logic;
-    O_tdata  : out tstatus;
+    O_tdata  : out toutput;
 	O_tready : in std_logic
     );
 end bin_tree;
@@ -107,6 +111,6 @@ end process;
 
 I_tready <= O_tready;
 O_tvalid <= '1' when not(inputs(k).stat = invalid) else '0';
-O_tdata <= overflow when inputs(k).stat = search else inputs(k).stat;
+O_tdata <= (data => inputs(k).data, stat => overflow) when inputs(k).stat = search else (data => inputs(k).data, stat => inputs(k).stat);
 
 end rtl;

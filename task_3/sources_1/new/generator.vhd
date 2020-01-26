@@ -71,7 +71,7 @@ O_tvalid_prim <= '1' when skipWhen6 /= conv_unsigned(6, 8) else '0';
             if counter < 10 then
                 counter <= counter + 1;
                 number <= numbers(counter);
-            else    
+            else
                 counter <= counter + 1;
             end if;
          end if;
