@@ -7,7 +7,7 @@ entity reciever is
 generic (N : integer := 16); 
 port (
   clk, aresetn : in std_logic; 
-  I_tdata : in toutput; 
+  I_tdata : in std_logic_vector(23 downto 0); 
   I_tvalid : in std_logic; 
   I_tready : out std_logic
 );
@@ -19,7 +19,8 @@ signal number : unsigned(N - 1 downto 0);
 signal O_tvalid_prim : std_logic; 
 signal o_valid     : std_logic;
 signal freezeWhen7 : unsigned(7 downto 0);
-signal counter : integer; 
+signal counter : integer;
+signal in_data : toutput; 
 constant answers : test_seq := (
         (stat => inserted, data => conv_unsigned(2, N)),
         (stat => inserted, data => conv_unsigned(5, N)),
@@ -36,6 +37,7 @@ constant answers : test_seq := (
 begin
 
 I_tready <= '1' when freezeWhen7 /= conv_unsigned(7, 8) else '0';
+in_data <= vector2toutput(I_tdata);
 
   process (clk, aresetn) is
   variable w8 : std_logic;
@@ -52,7 +54,7 @@ I_tready <= '1' when freezeWhen7 /= conv_unsigned(7, 8) else '0';
             freezeWhen7 <= freezeWhen7 + 1;
         end if;
         if I_tvalid = '1' then
-            assert I_tdata = answers(counter) report "Correct answer" severity warning;
+            assert in_data = answers(counter) report "Correct answer" severity warning;
             counter <= counter + 1; 
          end if;
     end if; 
